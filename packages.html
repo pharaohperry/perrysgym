@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perry's Gym | Packages</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #e0e0e0; }
+        .navbar { background-color: red; }
+        .navbar-nav .nav-link { color: black; font-weight: bold; transition: color 0.3s ease; margin: 0 15px; }
+        .navbar-nav .nav-link:hover { color: white; }
+        .navbar-nav .nav-link.active { color: white; }
+        .book-now-btn { background-color: black; color: white; border-radius: 20px; padding: 10px 20px; transition: box-shadow 0.3s ease; }
+        .book-now-btn:hover { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+        .navbar-brand img { height: 60px; }
+
+        .background-logo {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .packages-header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .packages-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .package-card {
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .package-card h3 {
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .packages-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .packages-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-link {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Perry's Gym Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Our Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="staff.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn book-now-btn" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Logo -->
+    <img src="assets/logo.png" alt="Background Logo" class="background-logo">
+
+    <!-- Packages Section -->
+    <div class="packages-header">
+        WORKOUT <span style="color:red;">YOUR</span> WAY!
+        <div class="sub-header" style="text-align: center; font-size: 1.2rem; margin-bottom: 20px;">
+            To start a new package or change an existing one, 
+            <a href="contact.html" class="contact-link">contact us!</a>
+        </div>
+    </div>
+
+    <div class="packages-container">
+        <div class="package-card"><h3>Unlimited Plan</h3><p>Enjoy unlimited access to all gym facilities, group classes, and personal training discounts.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $120/month</span></p></div>
+        
+        <div class="package-card"><h3>Yearly Plan</h3><p>Get a full year of membership at a discounted rate. Includes priority booking for classes and events.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $1100/year</span></p></div>
+        
+        <div class="package-card"><h3>Monthly Plan</h3><p>A flexible membership that renews monthly. Perfect for short-term commitments.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $99/month</span></p></div>
+        
+        <div class="package-card"><h3>Family Plan</h3><p>Includes up to 4 family members. Each member enjoys full access to all facilities and classes.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $250/month</span></p></div>
+        
+        <div class="package-card"><h3>Weekly Plan</h3><p>Ideal for short-term training or visitors. Grants full gym access for a week.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $40/week</span></p></div>
+        
+        <div class="package-card"><h3>Pay As You Go Plan</h3><p>No commitments—pay per visit and train at your convenience.
+        <br><span style='color:yellow; font-weight:bold;'>Rate: $20/day</span></p></div>
+    </div>
+</body>
+</html>

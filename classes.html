@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perry's Gym | Classes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #e0e0e0; }
+        .navbar { background-color: red; }
+        .navbar-nav .nav-link { color: black; font-weight: bold; transition: color 0.3s ease; margin: 0 15px; }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: white; }
+        .book-now-btn { background-color: black; color: white; border-radius: 20px; padding: 10px 20px; transition: box-shadow 0.3s ease; }
+        .book-now-btn:hover { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+        .navbar-brand img { height: 60px; }
+
+        .background-logo {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .classes-header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .classes-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .class-card {
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            min-width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .class-card img {
+            width: 100%;
+            border-radius: 10px;
+            border: 5px solid red;
+        }
+
+        @media (max-width: 768px) {
+            .classes-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .class-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Perry's Gym Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Our Mission</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="staff.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn book-now-btn" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Logo -->
+    <img src="assets/logo.png" alt="Background Logo" class="background-logo">
+
+    <!-- Classes Section -->
+    <div class="classes-header">THE <span style="color:red;">CLASSES</span> WE OFFER!</div>
+    <div class="classes-container">
+        <div class="class-card">
+            <h2>Cardio Class</h2>
+            <p style="color:black;">(Monday and Wednesday)</p>
+            <img src="assets/cardio.jpg" alt="Cardio Class">
+            <p>Boost endurance and burn calories with our high-energy Cardio Class. This session features interval training,
+                 running drills, and dynamic body movements to keep your heart pumping strong.</p>
+        </div>
+        <div class="class-card">
+            <h2>Strength Class</h2>
+            <p style="color:black;">(Tuesday and Thursday)</p>
+            <img src="assets/strength.jpg" alt="Strength Class">
+            <p>Build power and muscle definition in our Strength Class. This session focuses on resistance training,
+                 weightlifting techniques, and controlled movements to enhance strength and conditioning.</p>
+        </div>
+        <div class="class-card">
+            <h2>Hybrid Class</h2>
+            <p style="color:black;">(Friday, Saturday and Sunday)</p>
+            <img src="assets/hybrid.jpg" alt="Hybrid Class">
+            <p>Experience the best of both worlds with our Hybrid Class! Combining cardio and strength elements,
+                 this session features an electrifying workout with a live DJ to keep you motivated and energized.</p>
+        </div>
+    </div>
+</html>

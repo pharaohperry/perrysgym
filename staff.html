@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perry's Gym | Our Team</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #e0e0e0; }
+        .navbar { background-color: red; }
+        .navbar-nav .nav-link { color: black; font-weight: bold; transition: color 0.3s ease; margin: 0 15px; }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: white; }
+        .book-now-btn { background-color: black; color: white; border-radius: 20px; padding: 10px 20px; transition: box-shadow 0.3s ease; }
+        .book-now-btn:hover { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+        .navbar-brand img { height: 60px; }
+
+        .background-logo {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .team-header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .team-header span {
+            color: red;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .team-card {
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 10px;
+        }
+
+        .team-card h3 {
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .team-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Perry's Gym Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Our Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="staff.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn book-now-btn" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Logo -->
+    <img src="assets/logo.png" alt="Background Logo" class="background-logo">
+
+
+    <!-- Team Section -->
+    <div class="team-header">
+        MEET THE <span>COACHES</span>
+    </div>
+
+    <div class="team-container">
+        <div class="team-card">
+            <img src="assets/cairo.jpg" alt="Coach Cairo">
+            <h3>CAIRO</h3>
+            <p><strong>Cairo is a high-energy fitness coach with a background in basketball
+                 and functional strength training. A former college athlete, he specializes 
+                 in explosive workouts, speed drills, and endurance training. Cairo is all 
+                 about pushing limits and ensuring his clients build both strength and agility.
+                  His motto: "Train hard, play harder!"
+                </strong></p>
+        </div>
+
+        <div class="team-card">
+            <img src="assets/annie.jpg" alt="Coach Annie">
+            <h3>ANNIE</h3>
+            <p><strong>Annie is a certified personal trainer and yoga instructor who focuses on holistic fitness.
+                 With a background in nutrition and mobility training, she helps clients find the perfect balance
+                  between strength, flexibility, and recovery. Whether it's weight training, injury prevention,
+                   or mindful movement, Annie’s sessions leave people feeling stronger 
+                   and healthier inside and out.
+                </strong></p>
+        </div>
+
+        <div class="team-card">
+            <img src="assets/lebron.jpg" alt="Coach Lebron">
+            <h3>LEBRON</h3>
+            <p><strong>LeBron is a strength and conditioning expert with years of experience training athletes and 
+                fitness enthusiasts. Specializing in powerlifting, endurance training, and sports performance, 
+                he brings an intense but rewarding energy to every session. His goal? To help clients maximize strength, 
+                improve stamina, and dominate their fitness goals.
+            </strong></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perry's Gym | Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #e0e0e0; position: relative; }
+        .navbar { background-color: red; }
+        .navbar-nav .nav-link { color: black; font-weight: bold; transition: color 0.3s ease; margin: 0 15px; }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: white; }
+        .book-now-btn { background-color: black; color: white; border-radius: 20px; padding: 10px 20px; transition: box-shadow 0.3s ease; }
+        .book-now-btn:hover { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+        .navbar-brand img { height: 60px; }
+
+        .background-logo {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .location-header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .location-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            gap: 30px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .location-map {
+            width: 50%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            border: 5px solid red;
+        }
+
+        .contact-info {
+            background-color: red;
+            color: white;
+            font-size: 1.2rem;
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info span {
+            font-weight: bold;
+        }
+
+        @media (max-width: 992px) {
+            .location-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .location-map, .contact-info {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Perry's Gym Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Our Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="staff.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn book-now-btn" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Logo -->
+    <img src="assets/logo.png" alt="Background Logo" class="background-logo">
+
+    <!-- Location Section -->
+    <div class="location-header">GET IN TOUCH WITH US!</div>
+    <div class="location-container">
+        <div class="location-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.4501976719393!2d-75.68313208450067!3d45.42310617910142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050ae5ed2973%3A0x2ef50c370bde41f3!2sUniversity%20of%20Ottawa!5e0!3m2!1sen!2sca!4v1708041528471!5m2!1sen!2sca" 
+                width="600" height="450" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        <div class="contact-info">
+            <p><span>Address:</span> 123 Sesame Street, Ottawa, ON, Canada</p>
+            <p><span>Email:</span> perrysgym@email.com</p>
+            <p><span>Contact Number:</span> 123-456-7890</p>
+            <p><span>Business Hours:</span> 7am - 3pm (Monday - Friday)</p>
+        </div>
+    </div>
+</body>
+</html>
